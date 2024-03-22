@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sua Página</title>
+  <style>
+    /* Estilo para o elemento select */
+    select.eventoSelecionado {
+      border: 1px solid black; /* Borda de 1 pixel, sólida, cor preta */
+      padding: 5px; /* Espaçamento interno para a borda */
+    }
+
+    label#labelEvento {
+      display: inline-block; 
+      margin-right: 10px; 
+    }
+
+    fieldset#infoAcesso {
+      border: 1px solid black; 
+      padding: 10px; 
+      margin-bottom: 20px; 
+    }
+    .extra-small-image {
+    width: 50px; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    cursor: pointer;
+      
+    /* Estilo para os botões de rádio */
+    input[type="radio"] {
+      appearance: none; /* Remove o estilo padrão do sistema */
+      -webkit-appearance: none; /* Para navegadores WebKit */
+      -moz-appearance: none; /* Para navegadores Mozilla */
+      width: 20px; /* Define a largura do botão de rádio */
+      height: 20px; /* Define a altura do botão de rádio */
+      border: 2px solid black; /* Borda do botão */
+      border-radius: 4px; /* Borda arredondada */
+      margin-right: 10px; /* Espaçamento à direita */
+      cursor: pointer; /* Cursor ao passar por cima */
+    }
+
+    /* Estilo para botão de rádio marcado */
+    input[type="radio"]:checked {
+      background-color: black; /* Cor de fundo ao estar marcado */
+    }
+
+    /* Remover linha de pixel da legenda */
+    legend {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="inicio"></div>
+  <div style="float: right;">
+    <a href="index.html" class="Home">HOME</a>
+    <a href="Eventos.html" class="EVENTOS">EVENTOS</a>
+    <a href="Contato.html" class="CONTATO">CONTATO</a>
+    <a href="Sobre.html" class="SOBRE">SOBRE</a> 
+    <a href="Login.html" class="ENTRAR">ENTRAR</a> 
+  </div> 
+
+  <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/Logo.jpg" />
+
+
+      
+      <legend><h1 style="border: none;">Mande uma mensagem </h1></legend>
+      <ul>
+        <li><label for="nomeCompleto">Nome:</label><input type="text" id="nomeCompleto" /></li>
+        <li><label for="email">Email:</label><input type="email" id="email" /></li>
+        <li><label for="celular">Telefone:</label><input type="tel" id="celular" pattern="[0-9]{2}[0-9]{5}-[0-9]{4}" placeholder="(99)99999-9999" /></li>
+        <li><label id="labelAssunto" for="assuntoSelecionado">Assunto:</label>
+          <select name="AssuntoSelecionado" class="Assunto">
+            <option value="--selecionar--">--Selecionar--</option>
+            <option value="Sugestão">Sugestão</option>
+            <option value="Reclamação">Reclamação</option>
+          </select>
+        </li>
+        <li><label for="mensagem">Mensagem:</label><textarea id="mensagem" rows="4" cols="50"></textarea></li>
+      </ul>
+    </fieldset>
+
+    <fieldset id="Opções de Resposta">
+      <legend><h3>Opções de resposta</h3></legend>
+      <ul>
+        <label for="emailOpcao">E-mail</label><input type="radio" id="emailOpcao" name="opcaoResposta" value="E-mail"></li>
+        <label for="telefoneOpcao">Telefone</label><input type="radio" id="telefoneOpcao" name="Telefone" value="Telefone"></li>
+      </ul>
+    </fieldset>
+
+    <div>
+      <li><button type="submit">Enviar</button>
+
+        <br><br><img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/facebook.png" class="extra-small-image space-bottom" />
+
+        <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP:05110-000 - São Paulo/SP Contato: (011)2504-0100</p>
+
+    </div>
+  </form>
+</body>
+
+</html>

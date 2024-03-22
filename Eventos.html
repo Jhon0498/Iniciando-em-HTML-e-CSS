@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sua Página</title>
+  <style>
+    /* Estilo para o elemento select */
+    select.eventoSelecionado {
+      border: 1px solid black; /* Borda de 1 pixel, sólida, cor preta */
+      padding: 5px; /* Espaçamento interno para a borda */
+    }
+
+    label#labelEvento {
+      display: inline-block; 
+      margin-right: 10px; 
+    }
+
+    fieldset#infoAcesso {
+      border: 1px solid black; 
+      padding: 10px; 
+      margin-bottom: 20px; 
+    }
+  </style>
+</head>
+
+<body>
+  <div id="inicio"></div>
+  <div style="float: right;">
+    <a href="index.html" class="Home">HOME</a>
+    <a href="index.html" class="EVENTOS">EVENTOS</a>
+    <a href="Contato.html" class="CONTATO">CONTATO</a>
+    <a href="index.html" class="SOBRE">SOBRE</a>
+    <a href="index.html" class="ENTRAR">ENTRAR</a>
+  </div>
+  <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/Logo.jpg" />
+  <h1><strong>Inscreva-se</strong></h1>
+
+  <fieldset id="evento">
+    <label id="labelEvento" for="eventoSelecionado">Evento</label>
+    <select name="eventoSelecionado" class="eventoSelecionado">
+      <option value="--selecionar--">--Selecionar--</option>
+      <option value="Feira Tecnológica">Feira Tecnológica</option>
+      <option value="Festa Junina">Festa Junina</option>
+      <option value="Torneio">Torneio</option>
+    </select>
+  </fieldset>
+
+  <form id="eventoForm">
+    <fieldset id="infoAcesso">
+      <legend><h3>Informações de acesso</h3></legend>
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" /> <br> <br>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" /><br><br>
+
+      <label for="confirmarSenha">Confirmar senha:</label>
+      <input type="password" id="confirmarSenha" />
+    </fieldset>
+
+    <fieldset id="infoPessoais">
+      <legend><h3>Informações Pessoais</h3></legend>
+      <label for="nomeCompleto">Nome completo:</label>
+      <input type="text" id="nomeCompleto" /> <br> <br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" /> <br> <br>
+
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" pattern="[0-9]{2}[0-9]{5}-[0-9]{4}" placeholder="(99)99999-9999" /><br><br>
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" /><br><br>
+
+      <fieldset id="sexo">
+        <legend><h3>Sexo</h3></legend>
+        <input type="radio" name="sexo" value="Masculino">Masculino
+        <input type="radio" name="sexo" value="Feminino">Feminino
+      </fieldset>
+
+      <label for="corFavorita">Cor Favorita:</label>
+      <input type="color" id="corFavorita" name="corFavorita" value="#ff0000"><br><br>
+
+      <label for="Perfil GitHub">Perfil GitHub:</label>
+      <input type="text" id="Perfil GitHub" /> <br> <br>
+    </fieldset>
+
+ <br>   <input type="submit" value="Inscrever" style="margin-bottom: 10px;">
+    <input type="reset" value="Limpar" style="margin-bottom: 10px;">
+  </form>
+</body>
+
+</html>
